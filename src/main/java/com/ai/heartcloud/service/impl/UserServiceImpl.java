@@ -19,4 +19,13 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     @Resource
     private UserMapper userMapper;
 
+
+    @Override
+    public boolean checkUser(User user) {
+        User dbUser = userMapper.selectOne(user);
+        if(null != dbUser && user.getPassWord().equals(dbUser.getPassWord())){
+            return true;
+        }
+        return false;
+    }
 }
