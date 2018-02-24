@@ -8,4 +8,5 @@ import com.ai.heartcloud.core.Service;
  */
 public interface UserService extends Service<User> {
 
+    public boolean checkUser(User user);
 }

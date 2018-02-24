@@ -26,7 +26,7 @@ public class RedisTest {
     public void test() throws Exception {
 
         // 保存字符串
-//        stringRedisTemplate.opsForValue().set("ccc", "sssss");
+        stringRedisTemplate.opsForValue().set("ccc", "sssss");
 
         // 保存对象
         User user = new User();
