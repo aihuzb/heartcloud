@@ -49,10 +49,11 @@ public class MainController {
                 cookie.setMaxAge(SESSION_TIME_OUT*1000);
                 cookie.setPath("/");
                 response.addCookie(cookie);
+                return "/pc/users";
             }
         }
         logger.info("login");
-        return "/pc/users";
+        return "/index";
     }
 
     @RequestMapping(value = "/users")
